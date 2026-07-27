@@ -48,23 +48,4 @@ Baseplate.CanCollide = true
 Baseplate.Transparency = 0.7
 Baseplate.Material = Enum.Material.SmoothPlastic
 Baseplate.Color = Color3.fromRGB(100, 100, 100)
-Baseplate.Name = "SellBaseplate"
-Baseplate.Parent = workspace
-
-TPButton.MouseButton1Click:Connect(function()
-	if HumanoidRootPart then
-		HumanoidRootPart.CFrame = CFrame.new(60, 15, 30180)
-	end
-end)
-
-RunService.RenderStepped:Connect(function()
-	if HumanoidRootPart and HumanoidRootPart.Parent then
-		local pos = HumanoidRootPart.Position
-		TextLabel.Text = string.format("X: %.1f  Y: %.1f  Z: %.1f", pos.X, pos.Y, pos.Z)
-	end
-end)
-
-Player.CharacterAdded:Connect(function(newChar)
-	Character = newChar
-	HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
-end)
+Baseplate.Name
